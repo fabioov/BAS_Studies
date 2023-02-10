@@ -1,7 +1,12 @@
-<mvc:View controllerName="nav02.m0901.controller.m09-01"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View controllerName="nav02.m0901.controller.m09-01" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <List id="companyList" items="{/ScarrSet}" headerText="{i18n>company_list_header_txt}">
+                <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active">
+                    <ObjectAttribute id="urlAttr" text="{Url}"></ObjectAttribute>
+                    <ObjectAttribute id="currAttr" text="{Currcode}"></ObjectAttribute>
+                </ObjectListItem>
+            </List>
+        </content>
     </Page>
 </mvc:View>
